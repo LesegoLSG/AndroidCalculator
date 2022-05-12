@@ -1,18 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textSize="40pt" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnAC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="AC"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnPlusMinus"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="+"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="*"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="/"
+                tools:ignore="TextContrastCheck"></Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnseven"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="7"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btneight"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="@string/_8"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnnine"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="9"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnpercent"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="%"
+                tools:ignore="TextContrastCheck"></Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnfour"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="4"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnfive"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="5"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnsix"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="6"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="+"
+                tools:ignore="TextContrastCheck"></Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnone"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="1"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btntwo"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="2"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnthree"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="3"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="-"
+                tools:ignore="TextContrastCheck"></Button>
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnzero"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="0"
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="."
+                tools:ignore="TextContrastCheck"></Button>
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="1pt"
+                android:layout_weight="1"
+                android:background="@color/teal_700"
+                android:text="="
+                tools:ignore="TextContrastCheck"></Button>
+
+        </TableRow>
+
+
+    </LinearLayout>
+</LinearLayout>
