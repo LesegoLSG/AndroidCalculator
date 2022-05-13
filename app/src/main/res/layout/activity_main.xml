@@ -13,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="right|center"
+        android:editable="true"
         android:ems="10"
+        android:gravity="right|center"
         android:inputType="textPersonName"
         android:text="0"
         android:textSize="40pt" />
@@ -45,7 +46,8 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
-                android:text="+"
+                android:onClick="btnShow"
+                android:text="+/-"
                 tools:ignore="TextContrastCheck"></Button>
 
             <Button
@@ -55,6 +57,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="operation"
                 android:text="*"
                 tools:ignore="TextContrastCheck"></Button>
 
@@ -65,6 +68,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="operation"
                 android:text="/"
                 tools:ignore="TextContrastCheck"></Button>
         </TableRow>
@@ -161,6 +165,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="operation"
                 android:text="+"
                 tools:ignore="TextContrastCheck"></Button>
         </TableRow>
@@ -209,6 +214,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="operation"
                 android:text="-"
                 tools:ignore="TextContrastCheck"></Button>
         </TableRow>
@@ -228,11 +234,12 @@
 
             <Button
                 android:id="@+id/btnzero"
-                android:layout_width="30pt"
+                android:layout_width="10pt"
                 android:layout_height="30pt"
                 android:layout_margin="1pt"
                 android:layout_weight="1"
-                android:background="@color/teal_700"
+                android:background="@drawable/custom_button"
+                android:onClick="btnShow"
                 android:text="0"
                 tools:ignore="TextContrastCheck"></Button>
 
@@ -243,6 +250,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="btnShow"
                 android:text="."
                 tools:ignore="TextContrastCheck"></Button>
 
@@ -253,6 +261,7 @@
                 android:layout_margin="1pt"
                 android:layout_weight="1"
                 android:background="@color/teal_700"
+                android:onClick="equalbtn"
                 android:text="="
                 tools:ignore="TextContrastCheck"></Button>
 

@@ -2,24 +2,41 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText et;
+    Button btnPerc;
+    Button btnAC;
+    boolean isCliecked=true;
+    String operator;
+    String oldValue;
+    String value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         et = findViewById(R.id.editText);
+        btnPerc = findViewById(R.id.btnpercent);
+        btnAC = findViewById(R.id.btnAC);
+        cancel();
     }
 
     public void btnShow(View view){
-        String value = et.getText().toString();
+        if(isCliecked) {
+            et.setText("");
+            isCliecked=false;
+        }
 
+        value = et.getText().toString();
+        double perValue;
         switch(view.getId()){
             case R.id.btnzero:
                 value +="0";
@@ -51,8 +68,68 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnnine:
                 value +="9";
                 break;
+            case R.id.btnDot:
+                value +=".";
+                break;
+            case R.id.btnPlusMinus:
+                value ="-"+value;
+                break;
 
         }
+
         et.setText(value);
+        
     }
+    public void operation(View view) {
+        isCliecked=true;
+        oldValue = et.getText().toString();
+        switch (view.getId()) {
+            case R.id.btnPlus:
+                operator = "+";
+                break;
+            case R.id.btnMinus:
+                operator = "-";
+                break;
+            case R.id.btnMultiply:
+                operator = "*";
+                break;
+            case R.id.btnDivide:
+                operator = "/";
+                break;
+        }
+        et.setText(value + operator);
+
+
+    }
+
+    public void equalbtn(View view){
+        String newValue = et.getText().toString();
+        double results = 0.0;
+        switch(operator){
+            case "+" :
+                results = Double.parseDouble(oldValue) + Double.parseDouble(newValue);
+                break;
+            case "-" :
+                results = Double.parseDouble(oldValue) - Double.parseDouble(newValue);
+                break;
+            case "*" :
+                results = Double.parseDouble(oldValue) * Double.parseDouble(newValue);
+                break;
+            case "/" :
+                results = Double.parseDouble(oldValue) / Double.parseDouble(newValue);
+                break;
+        }
+        et.setText(results+"");
+    }
+    public void cancel(){
+        btnAC.setOnClickListener(e ->{
+            et.setText("");
+        });
+    }
+
+
+
+
+
+
 }
