@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         et = findViewById(R.id.editText);
+        et.setFocusable(false);
+        et.setClickable(false);
         btnPerc = findViewById(R.id.btnpercent);
         btnAC = findViewById(R.id.btnAC);
         cancel();

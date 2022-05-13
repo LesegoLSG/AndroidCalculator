@@ -11,14 +11,28 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
+        android:layout_weight="1"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="right|center"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:text="0"
+        android:textSize="20pt" />
+
+    <EditText
+        android:id="@+id/editTexts"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
         android:layout_weight="1"
         android:editable="true"
         android:ems="10"
         android:gravity="right|center"
         android:inputType="textPersonName"
+        android:singleLine="false"
         android:text="0"
-        android:textSize="40pt" />
+        android:textSize="20pt" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -269,4 +283,5 @@
 
 
     </LinearLayout>
+
 </LinearLayout>
